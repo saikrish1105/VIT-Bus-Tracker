@@ -1,0 +1,17 @@
+class GeofenceBroadcastReceiver : BroadcastReceiver() {
+    override fun onReceive(context: Context, intent: Intent) {
+        val geofencingEvent = GeofencingEvent.fromIntent(intent)
+        if (geofencingEvent.hasError()) {
+            // Handle error
+            return
+        }
+
+        val geofenceTransition = geofencingEvent.geofenceTransition
+        if (geofenceTransition == Geofence.GEOFENCE_TRANSITION_ENTER ||
+            geofenceTransition == Geofence.GEOFENCE_TRANSITION_EXIT
+        ) {
+            // Show notification or perform other actions
+            // You can get the geofence ID using geofencingEvent.triggeringGeofences
+        }
+    }
+}
