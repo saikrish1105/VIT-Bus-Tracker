@@ -1,0 +1,18 @@
+<!-- layout_bus_occupancy.xml -->
+<TextView
+    android:id="@+id/tvBusId"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Bus ID: VIT123" />
+
+<TextView
+    android:id="@+id/tvTotalPassengers"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Total Passengers: 30" />
+
+<TextView
+    android:id="@+id/tvAvailableSeats"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Available Seats: 10" />
