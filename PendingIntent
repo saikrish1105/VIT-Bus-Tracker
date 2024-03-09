@@ -1,0 +1,4 @@
+val geofencePendingIntent: PendingIntent by lazy {
+    val intent = Intent(context, GeofenceBroadcastReceiver::class.java)
+    PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+}
