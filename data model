@@ -1,0 +1,5 @@
+data class BusOccupancy(
+    val busId: String, // Unique identifier for the bus
+    val totalPassengers: Int,
+    val availableSeats: Int
+)
