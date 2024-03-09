@@ -1,0 +1,13 @@
+val geofencingClient = LocationServices.getGeofencingClient(context)
+val geofencingRequest = GeofencingRequest.Builder()
+    .addGeofences(geofenceList)
+    .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER) // Trigger when entering geofence
+    .build()
+
+geofencingClient.addGeofences(geofencingRequest, geofencePendingIntent)
+    .addOnSuccessListener {
+        // Geofences added successfully
+    }
+    .addOnFailureListener { e ->
+        // Handle failure (e.g., permissions, device location settings)
+    }
