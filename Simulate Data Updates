@@ -1,0 +1,7 @@
+// Simulated data (replace with actual data)
+val bus1Occupancy = BusOccupancy(busId = "VIT123", totalPassengers = 30, availableSeats = 10)
+val bus2Occupancy = BusOccupancy(busId = "VIT456", totalPassengers = 20, availableSeats = 15)
+// ... Add more buses
+
+// Store the data (you can use ViewModel, LiveData, or other architecture components)
+val busOccupancyList = listOf(bus1Occupancy, bus2Occupancy)
