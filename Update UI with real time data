@@ -1,0 +1,17 @@
+class BusOccupancyActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_bus_occupancy)
+
+        // Assume you have references to TextViews
+        val tvBusId = findViewById<TextView>(R.id.tvBusId)
+        val tvTotalPassengers = findViewById<TextView>(R.id.tvTotalPassengers)
+        val tvAvailableSeats = findViewById<TextView>(R.id.tvAvailableSeats)
+
+        // Get actual bus occupancy data (from ViewModel, database, etc.)
+        val bus1 = busOccupancyList[0]
+        tvBusId.text = "Bus ID: ${bus1.busId}"
+        tvTotalPassengers.text = "Total Passengers: ${bus1.totalPassengers}"
+        tvAvailableSeats.text = "Available Seats: ${bus1.availableSeats}"
+    }
+}
