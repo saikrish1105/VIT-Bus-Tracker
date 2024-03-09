@@ -1,0 +1,16 @@
+// Example data for a bus stop
+val busStopId = "VIT_MainGate"
+val latitude = 12.9706
+val longitude = 79.1594
+val radiusMeters = 100.0 // Adjust as needed
+
+// Create a Geofence
+val geofence = Geofence.Builder()
+    .setRequestId(busStopId)
+    .setCircularRegion(latitude, longitude, radiusMeters)
+    .setExpirationDuration(Geofence.NEVER_EXPIRE) // Geofence never expires
+    .setTransitionTypes(Geofence.GEOFENCE_TRANSITION_ENTER or Geofence.GEOFENCE_TRANSITION_EXIT)
+    .build()
+
+// Add the geofence to a list
+val geofenceList = listOf(geofence)
