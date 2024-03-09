@@ -1,0 +1,6 @@
+GET https://maps.googleapis.com/maps/api/directions/json?
+origin={origin}
+&destination={destination}
+&waypoints=place_id:waypoint1|place_id:waypoint2|...
+&optimize=true
+&key=YOUR_API_KEY
